@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@theme {
+  --light-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+  --font-noto: "Noto Sans", sans-serif;
+
+  --color-customNeutral-50: hsl(200, 60%, 99%);
+  --color-customNeutral-100: hsl(0, 0%, 93%);
+  --color-customNeutral-200: hsl(217, 61%, 90%);
+  --color-customNeutral-300: hsl(0, 0%, 78%);
+  --color-customNeutral-600: hsl(226, 11%, 37%);
+  --color-customNeutral-700: hsl(225, 23%, 24%);
+  --color-customNeutral-800: hsl(226, 25%, 17%);
+  --color-customNeutral-900: hsl(227, 75%, 14%);
+  --color-customRed-400: hsl(3, 86%, 64%);
+  --color-customRed-500: hsl(3, 71%, 56%);
+  --color-customRed-700: hsl(3, 77%, 44%);
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: var(--font-noto);
+  @apply bg-white text-black dark:bg-customNeutral-900 dark:text-white;
+}
