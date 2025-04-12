@@ -2,7 +2,7 @@ import { useDarkMode } from "../../context/ThemeContext";
 import { CiCloudMoon } from "react-icons/ci";
 import { IoSunnyOutline } from "react-icons/io5";
 
-const ModeToggleBtn = () => {
+const ThemeToggleBtn = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
@@ -19,4 +19,4 @@ const ModeToggleBtn = () => {
   );
 };
 
-export default ModeToggleBtn;
+export default ThemeToggleBtn;

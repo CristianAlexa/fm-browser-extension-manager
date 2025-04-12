@@ -1,7 +1,10 @@
-import React from "react";
+import { useData } from "../context/DataContext";
 import Button from "./ui/Button";
+import ExtensionCard from "./ui/ExtensionCard";
 
 const Main = () => {
+  const { data, loading } = useData();
+
   return (
     <main className="max-w-[1200px] mx-auto">
       <div className="flex flex-col md:flex-row gap-8 justify-between items-center mb-8 ">
@@ -14,7 +17,15 @@ const Main = () => {
           <Button>Inactive</Button>
         </div>
       </div>
-      <div>cards here</div>
+      {loading ? (
+        <h2>Loading Extensions</h2>
+      ) : (
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {data.map((ext) => (
+            <ExtensionCard key={ext.name} ext={ext} />
+          ))}
+        </section>
+      )}
     </main>
   );
 };

@@ -1,5 +1,5 @@
 import logo from "../assets/images/logo.svg";
-import ModeToggleBtn from "./ui/ModeToggleBtn";
+import ThemeToggleBtn from "./ui/ThemeToggleBtn";
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
           Extensions
         </span>
       </div>
-      <ModeToggleBtn />
+      <ThemeToggleBtn />
     </header>
   );
 };
