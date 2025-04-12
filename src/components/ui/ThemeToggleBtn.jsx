@@ -11,9 +11,9 @@ const ThemeToggleBtn = () => {
       className="w-12 h-12 bg-customNeutral-100 dark:bg-customNeutral-700 rounded-xl flex justify-center items-center cursor-pointer"
     >
       {darkMode ? (
-        <CiCloudMoon className="w-8 h-8" />
-      ) : (
         <IoSunnyOutline className="w-8 h-8" />
+      ) : (
+        <CiCloudMoon className="w-8 h-8" />
       )}
     </button>
   );
